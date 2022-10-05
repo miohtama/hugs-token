@@ -1,6 +1,8 @@
 # DAMEX ERC-20 token
 
-work-in-progress
+- DAMEX token is OpenZeppelin v4.7.3 baed ERC-20 token
+- The token is burnable
+- The token and OpenZeppelin base ERC-20 contract have been modified to allow metadata (name, symbol) update
 
 # Deploy
 
@@ -50,4 +52,13 @@ Verify the deployment:
 ```shell
 DEPLOYED_CONTRACT_ADDRESS=0x0aC7B3733cBeE5D87A80fbf331f4A0bD01f17386
 npx hardhat verify --network mainnet --contract contracts/DAMEXToken.sol:DAMEXToken  $DEPLOYED_CONTRACT_ADDRESS
+```
+
+# Tests
+
+To run tests:
+
+```shell
+export PRIVATE_KEY=0x`openssl rand -hex 32`
+npx hardhat test
 ```
