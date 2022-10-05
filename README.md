@@ -2,9 +2,11 @@
 
 - DAMEX token is OpenZeppelin v4.7.3 baed ERC-20 token
 - The token is burnable
-- The token and OpenZeppelin base ERC-20 contract have been modified to allow metadata (name, symbol) update
+- The token and OpenZeppelin base ERC-20 contracts have been modified to allow metadata updates (name, symbol) 
 
 # Deploy
+
+The deployment is done using Alchemy API service and Etherscan.
 
 Create deployment key with Python and web3:
 
@@ -20,20 +22,20 @@ export ALCHEMY_API_KEY=...
 export ETHERSCAN_API_KEY=...
 ```
 
-## Goerli
+## Goerli testnet
 
 Deploy to Goerli using Hardhat:
 
 ```
 npx hardhat compile
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Verify the deployment:
 
 ```shell
 DEPLOYED_CONTRACT_ADDRESS=0xdD68BAEef4BC26F8ef921A43d448cE5A1cDac800
-npx hardhat verify --network rinkeby --contract contracts/DAMEXToken.sol:DAMEXToken  $DEPLOYED_CONTRACT_ADDRESS
+npx hardhat verify --network goerli --contract contracts/DAMEXToken.sol:DAMEXToken  $DEPLOYED_CONTRACT_ADDRESS
 ```
 
 ## Mainnet

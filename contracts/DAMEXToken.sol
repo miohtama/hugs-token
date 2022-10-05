@@ -29,6 +29,4 @@ contract DAMEXToken is Ownable, ERC20, ERC20Burnable {
 
         emit MetadataUpdated(name, symbol);
     }
-
-
 }
