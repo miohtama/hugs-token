@@ -11,12 +11,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * - Supports burning
  * - Supports metadata updating
  */
-contract DAMEXToken is Ownable, ERC20, ERC20Burnable {
+contract HUGSToken is Ownable, ERC20, ERC20Burnable {
 
     event MetadataUpdated(string name, string symbol);
     
-    constructor() ERC20("Damex Token", "DAMEX") {
-        _mint(msg.sender, 370_000_000 ether);
+    constructor() ERC20("Hugs Token", "HUGS") {
+        _mint(msg.sender, 100_000_000 ether);
     }
 
     /**

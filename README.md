@@ -1,6 +1,6 @@
-# DAMEX ERC-20 token
+# Hugs ERC-20 token
 
-- DAMEX token is OpenZeppelin v4.7.3 baed ERC-20 token
+- Hugs token is OpenZeppelin v4.7.3 baed ERC-20 token
 - The token is burnable
 - The token and OpenZeppelin base ERC-20 contracts have been modified to allow metadata updates (name, symbol) 
 
@@ -11,7 +11,7 @@ The deployment is done using Alchemy API service and Etherscan.
 Create deployment key with Python and web3:
 
 ```shell
-python -c "from web3 import Web3; w3 = Web3(); acc = w3.eth.account.create(); print(f'private key={w3.toHex(acc.privateKey)}, account={acc.address}')"
+python -c "from web3 import Web3; w3 = Web3(); acc = w3.eth.account.create(); print(f'private key={w3.to_hex(acc._private_key)}, account={acc.address}')"
 ```
 
 Set up your environment:
@@ -34,8 +34,8 @@ npx hardhat run scripts/deploy.js --network goerli
 Verify the deployment:
 
 ```shell
-DEPLOYED_CONTRACT_ADDRESS=0xdD68BAEef4BC26F8ef921A43d448cE5A1cDac800
-npx hardhat verify --network goerli --contract contracts/DAMEXToken.sol:DAMEXToken  $DEPLOYED_CONTRACT_ADDRESS
+DEPLOYED_CONTRACT_ADDRESS=
+npx hardhat verify --network goerli --contract contracts/HugsToken.sol:HugsToken  $DEPLOYED_CONTRACT_ADDRESS
 ```
 
 ## Mainnet
@@ -52,8 +52,8 @@ npx hardhat run scripts/deploy.js --network mainnet
 Verify the deployment:
 
 ```shell
-DEPLOYED_CONTRACT_ADDRESS=0x0aC7B3733cBeE5D87A80fbf331f4A0bD01f17386
-npx hardhat verify --network mainnet --contract contracts/DAMEXToken.sol:DAMEXToken  $DEPLOYED_CONTRACT_ADDRESS
+DEPLOYED_CONTRACT_ADDRESS=
+npx hardhat verify --network mainnet --contract contracts/HugsToken.sol:HugsToken  $DEPLOYED_CONTRACT_ADDRESS
 ```
 
 # Tests
