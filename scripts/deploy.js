@@ -4,12 +4,12 @@
 
  async function main() {
 
-   const DAMEXToken = await hre.ethers.getContractFactory("DAMEXToken");
+   const HugsToken = await hre.ethers.getContractFactory("HugsToken");
    console.log('Deploying token...');
-   const token = await DAMEXToken.deploy();
+   const token = await HugsToken.deploy();
 
    await token.deployed();
-   console.log("DAMEXToken deployed to:", token.address);
+   console.log("HugsToken deployed to:", token.address);
  }
 
  main()

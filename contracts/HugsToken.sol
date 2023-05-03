@@ -6,12 +6,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 
 /**
- * DAMEX token core.
+ * Hugs token core.
  *
  * - Supports burning
  * - Supports metadata updating
  */
-contract HUGSToken is Ownable, ERC20, ERC20Burnable {
+contract HugsToken is Ownable, ERC20, ERC20Burnable {
 
     event MetadataUpdated(string name, string symbol);
     
