@@ -22,9 +22,9 @@ export ALCHEMY_API_KEY=...
 export ETHERSCAN_API_KEY=...
 ```
 
-## Goerli testnet
+## Mumbai testnet
 
-Deploy to Goerli using Hardhat:
+Deploy to Mumbai using Hardhat:
 
 ```
 npx hardhat compile
@@ -38,7 +38,7 @@ DEPLOYED_CONTRACT_ADDRESS=0x549b63daf6A23267b813F704aEDdDc61302E6729
 npx hardhat verify --network mumbai --contract contracts/HugsToken.sol:HugsToken  $DEPLOYED_CONTRACT_ADDRESS
 ```
 
-## Mainnet
+## Polygon mainnet
 
 Deploy to Ethereum mainnet using Hardhat:
 
